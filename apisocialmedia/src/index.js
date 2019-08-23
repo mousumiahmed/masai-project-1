@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Components/App.js';
+import {BrowserRouter} from 'react-router-dom';
+import Facebook from './Components/Facebook.js';
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render((
+	<BrowserRouter>
+		<Facebook />
+	</BrowserRouter>
+	),document.getElementById('root'));

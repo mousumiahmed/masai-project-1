@@ -1,0 +1,26 @@
+.hed{
+    height:100%;
+    background-color: white;
+}
+
+.navbar{
+    background-color: blue;
+}
+.colorwhite{
+    color:white;
+    margin:10px;
+}
+@media (min-width: 576px) { 
+    .colorwhite{
+        color:white;
+        margin:5px;
+    }
+
+}
+@media (min-width: 768px) { 
+    .colorwhite{
+        color:white;
+        margin:7px;
+    }
+
+ }
