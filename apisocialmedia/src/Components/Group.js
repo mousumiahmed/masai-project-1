@@ -20,9 +20,10 @@ class Group extends React.Component{
                        <div key={index} className = "col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 my-2">
                            <div className="card" style= {{width: "13rem"}}>
                                  <div className="card-body">
-                                   <h6 className="card-title">{value.id}</h6>
-                                   <h6>{value.name}</h6>
+                                   <h6 className="card-title">{value.name}</h6>
+                                   <img src={value.picture.data.url} ></img>
                                    <p>{value.description}</p>
+                                   <p>{value.created_time}</p>
 
                                   
                                </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'reactstrap';
 
 
 
@@ -9,7 +11,7 @@ class Album extends React.Component{
     
 
     render(){
-        console.log(this.props.albums);
+       // console.log(this.props.albums);
         return(
             <div className = "container">
                 <div className = "row">    
@@ -18,12 +20,11 @@ class Album extends React.Component{
                        <div key={index} className = "col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 my-2">
                            <div className="card" style= {{width: "13rem"}}>
                                  <div className="card-body">
-                                   <h6 className="card-title">{value.created_time}</h6>
-                                   <p><img src={value.picture.data.url} /></p>
+                                   <h6 className="card-title">{value.name}</h6>
+                                   <img src={value.picture.data.url} ></img>
                                    <p>{value.name}</p>
-                                   
-                                   
-                                  
+                                   <p>{value.created_time}</p>
+
                                   
                                </div>
                            </div>

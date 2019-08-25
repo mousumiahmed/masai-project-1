@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from 'reactstrap';
+import style from "./app.module.css";
 
 
 
@@ -19,7 +20,7 @@ class Post extends React.Component{
                    return (
                        <div key={index} className = "col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 my-2">
                            <div className="card" style= {{width: "13rem"}}>
-                                 <img src={value.full_picture} style={{height:100,width:100}} className="card-img-top " alt={value.name}/>
+                                 <img src={value.full_picture}  className="card-img-top " alt={value.name}/>
                                  <div className="card-body">
                                    <h6 className="card-title">{value.created_time}</h6>
                                    <p>{value.message}</p>

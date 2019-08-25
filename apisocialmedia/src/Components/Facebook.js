@@ -9,6 +9,9 @@ import style from "./app.module.css";
 import {Route, Link,Switch} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Jumbotron,Container } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 
 export default class Facebook extends React.Component {
@@ -19,10 +22,9 @@ export default class Facebook extends React.Component {
       userID: "",
       name: "",
       email: "",
-      hometown:"",
       friends:"",
       picture: "",
-      birthday:"",
+      location:"",
       likes:[],
       posts:[],
       groups:[],
@@ -40,14 +42,14 @@ export default class Facebook extends React.Component {
       userID: response.userID,
       name: response.name,
       email: response.email,
-      hometown:response.hometown.name,
       friends:response.friends.summary.total_count,
-      birthday:response.birthday,
       picture: response.picture.data.url,
       likes:response.likes.data,
       posts:response.posts.data,
       groups:response.groups.data,
-      albums:response.albums.data
+      albums:response.albums.data,
+      location:response.location.name
+
 
 
     });
@@ -63,18 +65,20 @@ export default class Facebook extends React.Component {
     if (this.state.isLoggedIn) {
       FbContent = (
         <div>
+          <div className=""></div>
           <img src={this.state.picture} alt={this.state.name} />
           <h2> {this.state.name}</h2>
-          <p>{this.state.email}</p>
+          <p className="text-primary"><i className="fa fa-envelope mr-1 text-primary"></i>{this.state.email}</p>
+          <p><i className="fa fa-map-marker fa-2x mr-1"></i>{this.state.location}</p>
           
          
-          <p className={style.navbar}><Link to='/'></Link>
+          <h6 className={style.navbar}><Link to='/'><span className={style.colorwhite}>Home</span></Link>
           <Link to='/posts'><span className={style.colorwhite}>Posts</span></Link>
           <Link to='/likes'><span className={style.colorwhite}>Likes</span></Link>
           <Link to='/group'><span className={style.colorwhite}>Groups</span></Link>
           <Link to='/albums'><span className={style.colorwhite}>Album</span></Link>
           
-          </p>
+          </h6>
          	
         </div>
       );
@@ -87,7 +91,7 @@ export default class Facebook extends React.Component {
                           xfbml={true}
                           version='4.0'
                           autoLoad={false}
-                          fields="name,email,picture,hometown,friends,birthday,likes,posts{full_picture,icon,name,created_time,description,message},groups,albums{picture}"
+                          fields="name,email,picture,location,friends,birthday,likes{about,created_time,description,name,picture},posts{full_picture,name,created_time,description,message},groups{description,created_time,picture},albums{picture}"
                           scope="public_profile,email,user_friends"
                           callback={this.responseFacebook.bind(this)}
                           disableMobileRedirect={true}
@@ -118,5 +122,5 @@ export default class Facebook extends React.Component {
 
 
 const Welcome = () =>{
-  return <div>Welcome to Your Page</div>
+  return <div><h4>Lets Flashback to your FB once More</h4></div>
 }

@@ -19,7 +19,9 @@ class Likes extends React.Component{
                            <div className="card" style= {{width: "13rem"}}>
                                  <div className="card-body">
                                    <h6 className="card-title">{value.name}</h6>
-                                   <h6>{value.id}</h6>
+                                   
+                                   <p>{value.about}</p>
+                                   <img src={value.picture.data.url} />
                                    <p>{value.created_time}</p>
 
                                   
