@@ -66,9 +66,9 @@ export default class Facebook extends React.Component {
       FbContent = (
         <div>
           <div className=""></div>
-          <img src={this.state.picture} alt={this.state.name} />
+          <img src={this.state.picture} alt={this.state.name} className={style.profile} style ={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29)"}}/>
           <h2> {this.state.name}</h2>
-          <p className="text-primary"><i className="fa fa-envelope mr-1 text-primary"></i>{this.state.email}</p>
+          <p className="text-primary"><i className="fa fa-envelope mr-1 text-primary"></i><em>{this.state.email}</em></p>
           <p><i className="fa fa-map-marker fa-2x mr-1"></i>{this.state.location}</p>
           
          
@@ -112,6 +112,9 @@ export default class Facebook extends React.Component {
              <Route path = "/group" render = {props => <Group groups={this.state.groups} {...props}/>} />
              <Route path = "/albums" render = {props => <Album albums={this.state.albums} {...props}/>} />
              </div>
+             <Jumbotron>
+               <h4>@2019</h4>
+             </Jumbotron>
             
           </Container>
         </Jumbotron>
