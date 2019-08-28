@@ -21,11 +21,8 @@ class Album extends React.Component{
                            <div className="card" style= {{width: "13rem"}} style ={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29)"}}>
                                  <div className="card-body">
                                    <h6 className="card-title">{value.name}</h6>
-                                   <img src={value.picture.data.url} ></img>
-                                   <p>{value.name}</p>
-                                   <p>{value.created_time}</p>
-
-                                  
+                                   <img src={value.picture.data.url} style={{height:"10em"}} ></img>
+                                   <p>{value.name}</p>                                
                                </div>
                            </div>
                        </div>

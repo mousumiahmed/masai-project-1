@@ -23,18 +23,12 @@ h4{
 p{
     font-size: 10px;
 }
-.card:hover{
-    -webkit-box-shadow:-1px 9px 40px -12px rgba(0,0,0,0.75);
-    -moz-box-shadow:-1px 9px 40px -12px rgba(0,0,0,0.75);
-    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0,0.75)
-    
 
-}
 .profile{
     border:2px solid blue;
     border-radius: 50%;
-    height:10%;
-    width:10%
+    padding:10%;
+    margin-top: 100px;   
 
 }
 .postimg{
@@ -42,3 +36,13 @@ p{
     width:30%;
 
 }
+.textwhite{
+    color:white;
+}
+Link:hover {
+    background-color: #000;
+  }
+  .height{
+      height: 500px;
+
+  }

@@ -16,15 +16,11 @@ class Likes extends React.Component{
                 {this.props.likes.map((value,index) => {
                    return (
                        <div key={index} className = "col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 my-2">
-                           <div className="card" style= {{width: "13rem"}} style ={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29)"}}>
+                           <div className="card card h-100" style= {{width: "13rem",height:"15rem"}} style ={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29)"}}>
                                  <div className="card-body">
-                                   <h6 className="card-title">{value.name}</h6>
-                                   
-                                   <p>{value.about}</p>
+                                   <h6 className="card-title text-primary">{value.name}</h6>
                                    <img src={value.picture.data.url} />
-                                   <p>{value.created_time}</p>
-
-                                  
+                                   <p>{value.about}</p>                     
                                </div>
                            </div>
                        </div>
